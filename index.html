@@ -1,0 +1,410 @@
+<html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хобби - способ отвлечься от тревоги</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+    font-family: 'Georgia', 'Times New Roman', 'Segoe UI', serif;
+    background: linear-gradient(135deg, #fff9f5 0%, #fef7e8 100%);
+    color: #5a5a5a;
+    line-height: 1.6;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><!-- большая розовая звезда --><path d="M120 80 L135 110 L170 115 L145 135 L155 170 L120 150 L85 170 L95 135 L70 115 L105 110 Z" fill="%23f5cfcf" opacity="0.5"/><!-- большая зеленая звезда --><path d="M380 350 L395 380 L430 385 L405 405 L415 440 L380 420 L345 440 L355 405 L330 385 L365 380 Z" fill="%23d4e6d4" opacity="0.5"/><!-- средняя розовая звезда --><path d="M400 80 L410 98 L430 100 L415 112 L422 130 L400 120 L378 130 L385 112 L370 100 L390 98 Z" fill="%23f5cfcf" opacity="0.45"/><!-- средняя зеленая звезда --><path d="M80 350 L90 368 L110 370 L95 382 L102 400 L80 390 L58 400 L65 382 L50 370 L70 368 Z" fill="%23d4e6d4" opacity="0.45"/><!-- одна маленькая розовая звездочка --><path d="M250 250 L254 260 L264 260 L256 266 L260 276 L250 270 L240 276 L244 266 L236 260 L246 260 Z" fill="%23f5cfcf" opacity="0.5"/><!-- одна маленькая зеленая звездочка --><path d="M450 220 L454 230 L464 230 L456 236 L460 246 L450 240 L440 246 L444 236 L436 230 L446 230 Z" fill="%23d4e6d4" opacity="0.5"/></svg>');
+    background-repeat: repeat;
+    background-size: 500px 500px;
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+        /* Пастельные цвета */
+        :root {
+            --rose-light: #ffe8e8;
+            --rose-soft: #fdd8d8;
+            --mint-light: #e8f3e8;
+            --mint-soft: #d4e6d4;
+            --peach: #fff0e6;
+            --lavender: #f3edf7;
+            --text-dark: #6b5e5e;
+            --text-soft: #8b7a7a;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Шапка с навигацией */
+        .nav-list {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 20px;
+            border-radius: 60px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(253, 216, 216, 0.5);
+        }
+
+        .nav-list ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            padding: 8px 18px;
+            border-radius: 40px;
+            transition: all 0.3s ease;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .nav-list a:hover {
+            background: var(--rose-light);
+            color: #b95c5c;
+            transform: translateY(-2px);
+        }
+
+        /* Заголовок главный */
+        .main-title {
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+
+        .main-title h1 {
+            font-size: 2.4rem;
+            color: #b98a8a;
+            letter-spacing: 2px;
+            font-weight: 400;
+            line-height: 1.3;
+            background: linear-gradient(135deg, #c49c9c, #a8c0a8);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* Вставка с общей информацией */
+        .intro-text {
+            background: var(--mint-light);
+            padding: 30px;
+            border-radius: 48px;
+            margin: 40px 0;
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            border: 1px solid #cfe2cf;
+        }
+
+        /* Фото на всю ширину */
+        .full-width-image {
+            width: 100%;
+            margin: 0 0 40px 0;
+            border-radius: 24px;
+            overflow: hidden;
+        }
+
+        .full-width-image img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Блок каждого хобби */
+        .hobby-section {
+            margin: 80px 0;
+            scroll-margin-top: 100px;
+        }
+
+        .hobby-title {
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: #b27d7d;
+            margin-bottom: 20px;
+            border-left: 6px solid #d9b8b8;
+            padding-left: 20px;
+        }
+
+        .hobby-desc {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: var(--text-soft);
+        }
+
+        /* Галерея фотографий в ряд */
+        .gallery-row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .gallery-img {
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            background: #f9f2e8;
+        }
+
+        .gallery-img img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s;
+        }
+
+        .gallery-img:hover img {
+            transform: scale(1.02);
+        }
+
+        /* Маленькие фотографии (5 штук) */
+        .small-gallery {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .small-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+            background: #f5ede4;
+        }
+
+        .small-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Стили для текста с маркерами */
+        .benefits-list {
+            margin: 20px 0 30px;
+            padding-left: 25px;
+        }
+
+        .benefits-list li {
+            margin: 12px 0;
+            font-size: 1rem;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .main-title h1 {
+                font-size: 1.6rem;
+            }
+            .nav-list ul {
+                gap: 12px;
+            }
+            .nav-list a {
+                font-size: 0.9rem;
+                padding: 6px 14px;
+            }
+            .hobby-title {
+                font-size: 1.8rem;
+            }
+            .gallery-img {
+                min-width: 160px;
+            }
+            .small-img {
+                width: 100px;
+                height: 100px;
+            }
+            .full-width-image img {
+                max-height: 120px;
+            }
+        }
+
+        /* Плавный скролл */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #b8a2a2;
+            border-top: 1px solid #f0e0d6;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Заголовок по центру -->
+    <div class="main-title">
+        <h1>ХОББИ ИЛИ КАК ОТВЛЕЧЬСЯ ОТ ТРЕВОГИ ТВОРЧЕСКОМУ ЧЕЛОВЕКУ</h1>
+    </div>
+
+    <!-- Навигационный список (якоря) -->
+    <div class="nav-list">
+        <ul>
+            <li><a href="#drawing">Рисование</a></li>
+            <li><a href="#photo">Фотографирование</a></li>
+            <li><a href="#cooking">Кулинария</a></li>
+            <li><a href="#clay">Лепка</a></li>
+            <li><a href="#theater">Театр</a></li>
+        </ul>
+    </div>
+
+    <!-- Общий текст о хобби -->
+    <div class="intro-text">
+        🌸 Хобби — эффективный способ борьбы с тревогой, ведь творческая деятельность переключает мозг с негативных мыслей на настоящий момент, фантазию и мелкую моторику. 🌸
+    </div>
+
+    <!-- Фотография на всю ширину -->
+    <div class="full-width-image">
+        <img src="Я.jpg" alt="Приветствую на моем сайте!">
+    </div>
+
+    <!-- 1) РИСОВАНИЕ -->
+    <div id="drawing" class="hobby-section">
+        <div class="hobby-title">1) Рисование</div>
+        <div class="hobby-desc">
+            Рисование — занимает 1 место в моем личном топе, и я сейчас расскажу почему!
+        </div>
+
+        <!-- Первые 3 фото в ряд -->
+        <div class="gallery-row">
+            <div class="gallery-img"><img src="краски.jpg?text=Карандаши" alt="Рисование карандашами"></div>
+            <div class="gallery-img"><img src="Диджитал.jpg?text=Диджитал" alt="Диджитал"></div>
+            <div class="gallery-img"><img src="краски1.jpg?text=Краски" alt="Краски"></div>
+        </div>
+
+        <ul class="benefits-list">
+            <li>🎨 Вы можете рисовать в традишке (карандаш, краски, пастель, маркеры и многое другое) или в диджитале (на планшете/телефоне при помощи стилуса/пальца).</li>
+            <li>✨ Так можно развивать воображение, создавать OC (original characters) и придумывать сюжеты с их участием, а может даже рисовать анимации!</li>
+            <li>💖 Познакомлю с моим примером — в 2024 году я придумала девочку, которую назвала Элис, а в 2026 — мальчика по имени Тео, чтобы было интереснее развивать их и придумывать милые сюжеты :)</li>
+        </ul>
+
+        <!-- 5 маленьких фотографий -->
+        <div class="small-gallery">
+            <div class="small-img"><img src="Э4.jpg?text=Элис" alt="Элис"></div>
+            <div class="small-img"><img src="Э6.jpg?text=Тео" alt="Тео"></div>
+            <div class="small-img"><img src="Э.jpg?text=Скетч" alt="Скетч"></div>
+            <div class="small-img"><img src="Э5.jpg?text=Анимация" alt="Анимация"></div>
+            <div class="small-img"><img src="Э3.jpg?text=Персонажи" alt="Персонажи"></div>
+        </div>
+    </div>
+
+    <!-- 2) ФОТОГРАФИРОВАНИЕ -->
+    <div id="photo" class="hobby-section">
+        <div class="hobby-title">2) Фотографирование</div>
+        <div class="hobby-desc">
+            📸 Гулять полезно, а если взять с собой фотоаппарат будет еще и интересно! Можно искать предметы одного цвета, формы или числа! Такой челлендж можно устроить вместе со своими друзьями :) И для этого увлечения вовсе не обязательно иметь много денег и постоянно путешествовать, ведь в первую очередь это искусство о тебе и самовыражении, а не о предмете съёмки.
+        </div>
+ <div class="hobby-desc">
+            📸 Фотографирование позволяет фиксировать уникальные моменты и развивать художественное видение. Оно тренирует внимание к деталям, композиции и свету, превращая обычные прогулки в поиск сюжетов! И конечно помогает научиться видеть красоту во всем, ты смотришь даже на обычные предметы по-новому!
+        </div>
+
+        <div class="gallery-row">
+            <div class="gallery-img"><img src="фото1.jpg?text=Природа" alt="Природа"></div>
+            <div class="gallery-img"><img src="фото4.jpg?text=Детали" alt="Детали"></div>
+            <div class="gallery-img"><img src="фото2.jpg?text=Улица" alt="Уличная фото"></div>
+        </div>
+        <div class="gallery-row">
+            <div class="gallery-img"><img src="фото3.jpg?text=Улица" alt="Уличная фото"></div>
+            <div class="gallery-img"><img src="фото5.jpg?text=Улица" alt="Уличная фото"></div>
+
+
+        </div>
+
+    <!-- 3) КУЛИНАРИЯ -->
+    <div id="cooking" class="hobby-section">
+        <div class="hobby-title">3) Кулинария</div>
+        <div class="hobby-desc">
+            🍰 В моем случае это скорее пробовать готовить только что-то сладкое, но и эксперементировать с другим тоже будет интересно! Это возможность изменять классические рецепты, сочетать несочетаемые ингредиенты, создавать уникальные блюда, узнавать о новых техниках и развивать вкус. И самое главное - ты сможешь насладишься вкусным результатом в конце!
+        </div>
+        <div class="gallery-row">
+            <div class="gallery-img"><img src="еда4.jpg?text=Десерты" alt="Сладкое"></div>
+            <div class="gallery-img"><img src="еда1.jpg?text=Выпечка" alt="Выпечка"></div>
+            <div class="gallery-img"><img src="еда3.jpg?text=Украшения" alt="Украшение блюд"></div>
+        </div>
+    </div>
+
+    <!-- 4) ЛЕПКА -->
+    <div id="clay" class="hobby-section">
+        <div class="hobby-title">4) Лепка</div>
+        <div class="hobby-desc">
+            🧸 Лепка — это удивительный способ успокоить ум через тактильные ощущения. Работа с пластичными материалами помогает снять напряжение, а результат радует глаз! Я пробовала лепить из лёгкого и обычного пластелина, из глины и даже покрывать посуду глазурью!
+        </div>
+        <div class="gallery-row">
+            <div class="gallery-img"><img src="глина2.jpg?text=Полимерная+глина" alt="Лепка из глины"></div>
+            <div class="gallery-img"><img src="глина3.jpg?text=Фигурки" alt="Миниатюры"></div>
+            <div class="gallery-img"><img src="глина1.jpg?text=Керамика" alt="Керамика"></div>
+        </div>
+        <ul class="benefits-list">
+            <li>✨ Развивает мелкую моторику и внимание к деталям.</li>
+            <li>🌸 Позволяет создавать уникальные подарки своими руками.</li>
+            <li>🎨 Медитативный процесс, который успокаивает и переключает мысли.</li>
+        </ul>
+    </div>
+
+    <!-- 5) ТЕАТР -->
+    <div id="theater" class="hobby-section">
+        <div class="hobby-title">5) Театр</div>
+        <div class="hobby-desc">
+            🎭 Театр — это про проживание эмоций и открытие различных произведений с новой стороны! Это встреча со своими мыслями и просто чудесный вариант перезагрузиться! Я очень люблю оперу и балет, реже хожу на спектакли, но каждый раз ощущаю себя воодушевленной и на душе спокойнее ;) 💫 Театр дарит незабываемые эмоции! Поэтому если ты еще ни разу не пробовал, то очень советую сходить!
+
+        </div>
+        <div class="gallery-row">
+            <div class="gallery-img"><img src="те1.jpg?text=Сцена" alt="Сцена"></div>
+            <div class="gallery-img"><img src="те3.jpg?text=Этюды" alt="Театральные этюды"></div>
+            <div class="gallery-img"><img src="те2.jpg?text=Зрители" alt="Зрители"></div>
+        </div>
+        <div class="hobby-desc" style="margin-top: 15px;">
+            Конечно существует еще множество других интересных занятий, для кого-то это вязание, игра на музыкальном инструменте или чтение книг, а для кого-то - компьютерные игры. И я скажу больше: все эти хобби я тоже пробовала, однако мы поговорили о личном топ-5! Самое главное - найти хобби по душе, а не заниматься за чем-то "модным" или "правильным", тогда и жить станет легче.
+        </div>
+    </div>
+
+    <footer>
+        🌿 Найди своё хобби и ты увидишь, что станешь меньше тревожиться 🌿
+    </footer>
+</div>
+
+</body>
+</html>
