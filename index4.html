@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продолжение 3 - Хобби и творчество</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #fff9f5 0%, #fef7e8 100%);
+            color: #5a5a5a;
+            line-height: 1.6;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><path d="M120 80 L135 110 L170 115 L145 135 L155 170 L120 150 L85 170 L95 135 L70 115 L105 110 Z" fill="%23f5cfcf" opacity="0.5"/><path d="M380 350 L395 380 L430 385 L405 405 L415 440 L380 420 L345 440 L355 405 L330 385 L365 380 Z" fill="%23d4e6d4" opacity="0.5"/><path d="M400 80 L410 98 L430 100 L415 112 L422 130 L400 120 L378 130 L385 112 L370 100 L390 98 Z" fill="%23f5cfcf" opacity="0.45"/><path d="M80 350 L90 368 L110 370 L95 382 L102 400 L80 390 L58 400 L65 382 L50 370 L70 368 Z" fill="%23d4e6d4" opacity="0.45"/><path d="M250 250 L254 260 L264 260 L256 266 L260 276 L250 270 L240 276 L244 266 L236 260 L246 260 Z" fill="%23f5cfcf" opacity="0.5"/><path d="M450 220 L454 230 L464 230 L456 236 L460 246 L450 240 L440 246 L444 236 L436 230 L446 230 Z" fill="%23d4e6d4" opacity="0.5"/></svg>');
+            background-repeat: repeat;
+            background-size: 500px 500px;
+            z-index: 0;
+        }
+        
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hobby-block {
+            margin-bottom: 80px;
+        }
+        
+        .hobby-title {
+            font-size: 2rem;
+            color: #b27d7d;
+            margin-bottom: 20px;
+            border-left: 5px solid #d9b8b8;
+            padding-left: 20px;
+        }
+        
+        .content-text {
+            font-size: 1.1rem;
+            margin: 20px 0 30px;
+            color: #6b5e5e;
+            background: #fffaf5;
+            padding: 25px;
+            border-radius: 30px;
+            border: 1px solid #f0e0d0;
+        }
+        
+        .gallery-row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .gallery-img {
+            width: 280px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            background: #f9f2e8;
+        }
+        
+        .gallery-img img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .nav-arrows {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 60px 0 40px;
+        }
+        
+        .nav-arrows a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 2rem;
+            background: #d9b8b8;
+            color: white;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        
+        .nav-arrows a:hover {
+            background: #c49c9c;
+            transform: scale(1.05);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            color: #b8a2a2;
+            border-top: 1px solid #f0e0d6;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-img { width: 240px; }
+            .hobby-title { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    
+    <div class="hobby-block">
+        <div class="hobby-title">10) Конструкторы (LEGO и не только)</div>
+        <div class="content-text">
+            <p>🧩 Собирать конструкторы — это не просто детская забава, а настоящий способ перезагрузить мозг. Когда вы ищете нужные детали и следуете инструкции, тревога отступает, остаётся только главная задача в данный момент - собрать нужное здание или фигурку.</p>
+            <p>🏗️ Самым популярным является LEGO, однако существует огромное количество других конструкторов — выбирайте то, что нравится вам. Это отличная возможность собрать что-то милое, связанное с любимым героем из мультика, игры и т.д.! На фотографиях можно увидеть Снусмумрика (Snufkin) из Мумидола и просто милого котика с мандаринами! :) </p>
+        </div>
+        <div class="gallery-row">
+            <div class="gallery-img"><img src="лего2.jpg" alt="Конструирование"></div>
+            <div class="gallery-img"><img src="лего1.jpg" alt="Конструирование"></div>
+            <div class="gallery-img"><img src="лего3.jpg" alt="Конструирование"></div>
+        </div>
+    </div>
+    
+    <div class="hobby-block">
+        <div class="hobby-title">11) Комнатные растения</div>
+        <div class="content-text">
+            <p>🌱 Забота о растениях — это хобби, которое учит терпению, дисциплине и вниманию к мелочам. Поливать, пересаживать, наблюдать за новыми листочками — всё это успокаивает и наполняет день смыслом.</p>
+            <p>🪴 Зеленые друзья создают уют и поднимают настроение. А ещё — за ними очень интересно наблюдать! Каждое утро проверять, не изменилось ли что, и радоваться маленьким чудесам природы. Начните с неприхотливых растений (например, суккулентов), и вы быстро втянетесь в этот увлекательный мир. Вдруг однажды у вас будет целый подоконник в фиалках! </p>
+        </div>
+        <div class="gallery-row">
+            <div class="gallery-img"><img src="растения1.jpg" alt="Растения"></div>
+            <div class="gallery-img"><img src="растения2.jpg" alt="Растения"></div>
+            <div class="gallery-img"><img src="растения3.jpg" alt="Растения"></div>
+        </div>
+    </div>
+    
+    <div class="nav-arrows">
+        <a href="index3.html" title="Назад ←">←</a>
+        <a href="index5.html" title="Далее →">→</a>
+    </div>
+    
+    <footer>🌿 Найди своё хобби и ты увидишь, что станешь меньше тревожиться 🌿</footer>
+</div>
+</body>
+</html>

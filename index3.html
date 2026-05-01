@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продолжение 2 - Хобби и творчество</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #fff9f5 0%, #fef7e8 100%);
+            color: #5a5a5a;
+            line-height: 1.6;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><path d="M120 80 L135 110 L170 115 L145 135 L155 170 L120 150 L85 170 L95 135 L70 115 L105 110 Z" fill="%23f5cfcf" opacity="0.5"/><path d="M380 350 L395 380 L430 385 L405 405 L415 440 L380 420 L345 440 L355 405 L330 385 L365 380 Z" fill="%23d4e6d4" opacity="0.5"/><path d="M400 80 L410 98 L430 100 L415 112 L422 130 L400 120 L378 130 L385 112 L370 100 L390 98 Z" fill="%23f5cfcf" opacity="0.45"/><path d="M80 350 L90 368 L110 370 L95 382 L102 400 L80 390 L58 400 L65 382 L50 370 L70 368 Z" fill="%23d4e6d4" opacity="0.45"/><path d="M250 250 L254 260 L264 260 L256 266 L260 276 L250 270 L240 276 L244 266 L236 260 L246 260 Z" fill="%23f5cfcf" opacity="0.5"/><path d="M450 220 L454 230 L464 230 L456 236 L460 246 L450 240 L440 246 L444 236 L436 230 L446 230 Z" fill="%23d4e6d4" opacity="0.5"/></svg>');
+            background-repeat: repeat;
+            background-size: 500px 500px;
+            z-index: 0;
+        }
+        
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hobby-block {
+            margin-bottom: 80px;
+        }
+        
+        .hobby-title {
+            font-size: 2rem;
+            color: #b27d7d;
+            margin-bottom: 20px;
+            border-left: 5px solid #d9b8b8;
+            padding-left: 20px;
+        }
+        
+        .content-text {
+            font-size: 1.1rem;
+            margin: 20px 0 30px;
+            color: #6b5e5e;
+            background: #fffaf5;
+            padding: 25px;
+            border-radius: 30px;
+            border: 1px solid #f0e0d0;
+        }
+        
+        .gallery-row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .gallery-img {
+            width: 280px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            background: #f9f2e8;
+        }
+        
+        .gallery-img img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-vertical {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .gallery-vertical .gallery-img {
+            width: 220px;
+        }
+        
+        .gallery-vertical .gallery-img img {
+            height: 280px;
+            object-fit: cover;
+        }
+        
+        .nav-arrows {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 60px 0 40px;
+        }
+        
+        .nav-arrows a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 2rem;
+            background: #d9b8b8;
+            color: white;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        
+        .nav-arrows a:hover {
+            background: #c49c9c;
+            transform: scale(1.05);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            color: #b8a2a2;
+            border-top: 1px solid #f0e0d6;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-img { width: 240px; }
+            .gallery-vertical .gallery-img { width: 160px; }
+            .gallery-vertical .gallery-img img { height: 210px; }
+            .hobby-title { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    
+    <div class="hobby-block">
+        <div class="hobby-title">8) Гербарий</div>
+        <div class="content-text">
+            <p>🌿 Гербарий — это не просто коллекция засушенных растений, а настоящее искусство! Собирать, сушить и оформлять листья, цветы и травы — удивительно успокаивающее занятие, которое возвращает в настоящий момент.</p>
+            <p>🍂 Прогулки в поисках интересных растений помогают отвлечься от тревог, а процесс создания гербария развивает внимательность, аккуратность и чувство прекрасного. Готовые работы можно использовать для украшения интерьера или в творческих проектах! Лично мне очень нравится собирать яркие листочки, а еще они могут быть необычной формы - так один раз мне встретился листик-сердечко, который до сих пор хранится в моем блокноте! </p>
+        </div>
+        <div class="gallery-row">
+            <div class="gallery-img"><img src="гербарий2.jpg" alt="Гербарий"></div>
+            <div class="gallery-img"><img src="гербарий1.jpg" alt="Гербарий"></div>
+            <div class="gallery-img"><img src="гербарий3.jpg" alt="Гербарий"></div>
+        </div>
+    </div>
+    
+    <div class="hobby-block">
+        <div class="hobby-title">9) Посткроссинг</div>
+        <div class="content-text">
+            <p>📮 Посткроссинг — это международный проект обмена открытками. Вы отправляете открытки случайным людям по всему миру и получаете открытки в ответ! Это удивительное хобби, которое объединяет тысячи людей!</p>
+            <p>✉️ Выбирать открытки, писать тёплые слова, ждать ответа из разных стран — всё это приносит радость и помогает почувствовать связь с миром. А ещё это отличный способ отвлечься от тревоги и поверить в доброту людей! </p>
+<p>📝 Хоть я и не писала в другие страны, но состояла в группе, где обсуждали книги и обменивались открытками, мне очень понравился этот опыт! Столько радости и тепла приносит каждое письмо, советую поучастовать в таком обмене хотя бы раз!</p>
+
+        </div>
+        <div class="gallery-vertical">
+            <div class="gallery-img"><img src="открытка3.jpg" alt="Посткроссинг"></div>
+            <div class="gallery-img"><img src="открытка1.jpg" alt="Посткроссинг"></div>
+            <div class="gallery-img"><img src="открытка2.jpg" alt="Посткроссинг"></div>
+            <div class="gallery-img"><img src="открытка4.jpg" alt="Посткроссинг"></div>
+        </div>
+    </div>
+    
+    <div class="nav-arrows">
+        <a href="index2.html" title="Назад ←">←</a>
+        <a href="index4.html" title="Далее →">→</a>
+    </div>
+    
+    <footer>🌿 Найди своё хобби и ты увидишь, что станешь меньше тревожиться 🌿</footer>
+</div>
+</body>
+</html>

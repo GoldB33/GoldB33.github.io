@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продолжение 4 - Хобби и творчество</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #fff9f5 0%, #fef7e8 100%);
+            color: #5a5a5a;
+            line-height: 1.6;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><path d="M120 80 L135 110 L170 115 L145 135 L155 170 L120 150 L85 170 L95 135 L70 115 L105 110 Z" fill="%23f5cfcf" opacity="0.5"/><path d="M380 350 L395 380 L430 385 L405 405 L415 440 L380 420 L345 440 L355 405 L330 385 L365 380 Z" fill="%23d4e6d4" opacity="0.5"/><path d="M400 80 L410 98 L430 100 L415 112 L422 130 L400 120 L378 130 L385 112 L370 100 L390 98 Z" fill="%23f5cfcf" opacity="0.45"/><path d="M80 350 L90 368 L110 370 L95 382 L102 400 L80 390 L58 400 L65 382 L50 370 L70 368 Z" fill="%23d4e6d4" opacity="0.45"/><path d="M250 250 L254 260 L264 260 L256 266 L260 276 L250 270 L240 276 L244 266 L236 260 L246 260 Z" fill="%23f5cfcf" opacity="0.5"/><path d="M450 220 L454 230 L464 230 L456 236 L460 246 L450 240 L440 246 L444 236 L436 230 L446 230 Z" fill="%23d4e6d4" opacity="0.5"/></svg>');
+            background-repeat: repeat;
+            background-size: 500px 500px;
+            z-index: 0;
+        }
+        
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+            position: relative;
+            z-index: 1;
+        }
+        
+        .intro-note {
+            background: #fff5eb;
+            padding: 25px;
+            border-radius: 30px;
+            margin-bottom: 50px;
+            text-align: center;
+            border: 1px solid #f0e0d0;
+            font-style: italic;
+            color: #b27d7d;
+            font-size: 1.1rem;
+        }
+        
+        .hobby-block {
+            margin-bottom: 80px;
+        }
+        
+        .hobby-title {
+            font-size: 2rem;
+            color: #b27d7d;
+            margin-bottom: 20px;
+            border-left: 5px solid #d9b8b8;
+            padding-left: 20px;
+        }
+        
+        .content-text {
+            font-size: 1.1rem;
+            margin: 20px 0 30px;
+            color: #6b5e5e;
+            background: #fffaf5;
+            padding: 25px;
+            border-radius: 30px;
+            border: 1px solid #f0e0d0;
+        }
+        
+        .gallery-row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .gallery-img {
+            width: 280px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            background: #f9f2e8;
+        }
+        
+        .gallery-img img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .nav-arrows {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 60px 0 40px;
+        }
+        
+        .nav-arrows a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 2rem;
+            background: #d9b8b8;
+            color: white;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        
+        .nav-arrows a:hover {
+            background: #c49c9c;
+            transform: scale(1.05);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            color: #b8a2a2;
+            border-top: 1px solid #f0e0d6;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-img { width: 240px; }
+            .hobby-title { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    
+    <div class="intro-note">
+        🌸 Эти три хобби могут заставить немного понервничать — то сложный уровень в игре, то сборы перед поездкой или непредвиденные обстоятельства, то проигрыш любимой команды :') <br>
+        Но знаете что? Они всё равно приносят столько положительных эмоций, что я не могу их не порекомендовать! 💕
+    </div>
+    
+    <div class="hobby-block">
+        <div class="hobby-title">12) Игры (настольные и компьютерные)</div>
+        <div class="content-text">
+            <p>🎮 Игры — это целый мир! Вечера настолок с друзьями, когда вы смеётесь, соревнуетесь и просто классно проводите время вместе. Или компьютерные игры, где можно погрузиться в увлекательный сюжет в красивом мире, пройти сложный уровень или просто отдохнуть после учёбы в обычной игре-песочнице.</p>
+            <p>🎲 Настольные игры - это живое общение и куча воспоминаний, над которыми можно будет долго смеяться. Зато компьютерные — развивают реакцию, логику и дают возможность оказаться в любой вселенной. И да, иногда бывает досадно проиграть или застрять на сложном моменте... Но победа после этого становится ещё слаще! Главное — играть в удовольствие и не забывать делать паузы 😊</p>
+        </div>
+        <div class="gallery-row">
+            <div class="gallery-img"><img src="игра2.jpg" alt="Настольные игры"></div>
+            <div class="gallery-img"><img src="игра1.jpg" alt="Компьютерные игры"></div>
+            <div class="gallery-img"><img src="игра3.jpg" alt="Игры"></div>
+        </div>
+    </div>
+    
+    <div class="hobby-block">
+        <div class="hobby-title">13) Путешествия</div>
+        <div class="content-text">
+            <p>🌅 Путешествия для меня — это не просто смена мест, а способ увидеть мир во всей его красоте. Я бесконечно люблю природу: рассветы, закаты, реки и моря, бескрайние леса и поля, каждое растение, каждый камень — всё это безумно красиво и дает огромное количество положительных эмоций и энерги! Иногда путь до определенного места может оказаться очень тяжелым, но награда - возможность полюбоваться местной природой и увидеть что-то действительно потрясающие, всегда побеждает страх и усталость</p>
+            <p>🏛️ Но и города тоже вдохновляют! Архитектура, музеи, старые улочки, местные кафе — в каждой поездке открываешь что-то новое. Да, бывает суматоха со сборами, долгая дорога или неожиданные ситуации... Но именно эти моменты делают каждое путешествие уникальным. А воспоминания остаются на всю жизнь!</p>
+        </div>
+        <div class="gallery-row">
+            <div class="gallery-img"><img src="пр1.jpg" alt="Путешествия"></div>
+            <div class="gallery-img"><img src="пр2.jpg" alt="Путешествия"></div>
+            <div class="gallery-img"><img src="пр3.jpg" alt="Путешествия"></div>
+            <div class="gallery-img"><img src="пр4.jpg" alt="Путешествия"></div>
+            <div class="gallery-img"><img src="пр5.jpg" alt="Путешествия"></div>
+        </div>
+    </div>
+    
+    <div class="hobby-block">
+        <div class="hobby-title">14) Формула-1 (или любой другой спорт)</div>
+        <div class="content-text">
+            <p>🏎️ Адреналин, скорость, борьба до последнего круга — это то, за что я люблю Формулу-1. Но вообще, к этому пункту можно отнести любой спорт, который заставляет сердце биться чаще. Болельщики поймут: это и радость от побед, и горечь поражений, и бесконечная вера в любимую команду или спортсмена (Forza Ferrari)! </p>
+            <p>🔥 Спорт дарит эмоции, которые сложно с чем-то сравнить. Когда твой любимый гонщик вырывается вперёд на последнем круге — дух захватывает! А если проигрывает... ну что ж, значит, будем болеть ещё сильнее в следующей гонке. Это эмоциональные американские горки, но именно они делают жизнь ярче и насыщеннее. Поэтому самое главное смотреть то, что тебе нравится и интересно! А может даже самому попробовать заниматься тем или иным видном спорта!(желаю удачи)</p>
+        </div>
+        <div class="gallery-row">
+            <div class="gallery-img"><img src="ф3.jpg" alt="Формула-1"></div>
+            <div class="gallery-img"><img src="ф1.jpg" alt="Спорт"></div>
+            <div class="gallery-img"><img src="ф2.jpg" alt="Спорт"></div>
+        </div>
+    </div>
+    
+    <div class="nav-arrows">
+        <a href="index4.html" title="Назад ←">←</a>
+        <a href="index.html" title="На главную">🏠</a>
+    </div>
+
+    <div style="text-align: center; margin: 40px 0 20px; padding: 25px; background: #fff5eb; border-radius: 30px; border: 1px solid #f0e0d0;">
+        <p style="font-size: 1rem; color: #b27d7d; margin-bottom: 10px;">
+            🌸 Почему именно 14 хобби? <br>
+            14 — моё любимое число (и день рождения!)
+        </p>
+        <p style="font-size: 0.95rem; color: #b8a2a2; margin-top: 15px;">
+            📝 Теперь можете перейти на <a href="index.html" style="color: #b27d7d; text-decoration: underline;">главную страницу</a> и оставить свой отзыв!
+        </p>
+    </div>
+    
+    <footer>🌿 Найди своё хобби и ты увидишь, что станешь меньше тревожиться 🌿</footer>
+</div>
+</body>
+</html>
